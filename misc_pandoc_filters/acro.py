@@ -39,8 +39,11 @@ def build_def_list():
         items.append(DefinitionItem(term=[Str(acro)], definitions=[defn]))
     return DefinitionList(*items)
 
-if __name__ == "__main__":
+def main():
     doc = load()
     doc = run_filter(acrolinks, doc=doc)
     doc.content =  list(doc.content) + [build_def_list()]
     dump(doc)
+    
+if __name__ == "__main__":
+    main()

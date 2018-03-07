@@ -46,5 +46,7 @@ def svg_to_any(key, value, fmt, meta):
            else:
                return Image(alt, [eps_name, title])
 
+def main():
+    toJSONFilter(svg_to_any)
 if __name__ == "__main__":
-  toJSONFilter(svg_to_any)
+  main()
